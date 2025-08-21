@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Animations */
+@layer utilities {
+  .animate-ripple {
+    animation: ripple 0.6s linear;
+  }
+  @keyframes ripple {
+    0% {
+      transform: scale(0);
+      opacity: 0.7;
+    }
+    80% {
+      transform: scale(1.2);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  .animate-bounce-short {
+    animation: bounce-short 0.3s;
+  }
+  @keyframes bounce-short {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.95);
+    }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.5s;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .animate-slide-in {
+    animation: slide-in 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @keyframes slide-in {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+/* Responsive Typography */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  }
+}
+
+/* Accessibility: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode preparation */
+:root {
+  --color-bg: #f3f4f6;
+  --color-bg-dark: #1e293b;
+  --color-primary: #2563eb;
+  --color-primary-dark: #60a5fa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1e293b;
+    --color-primary: #60a5fa;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .shadow,
+  .shadow-md,
+  .shadow-lg {
+    box-shadow: none !important;
+  }
+}

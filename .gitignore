@@ -1,0 +1,20 @@
+# Node
+node_modules/
+
+# Vite
+/dist/
+
+# Build
+/build/
+
+# Env
+.env*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
