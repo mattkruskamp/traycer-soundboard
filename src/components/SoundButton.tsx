@@ -68,7 +68,7 @@ const SoundButton: React.FC<SoundButtonProps> = ({
         {sound.keyBinding}
       </span>
       {loading && (
-        <div className="mt-2">
+        <div className="mt-2 absolute">
           <LoadingSpinner
             size="small"
             color="border-blue-400"
