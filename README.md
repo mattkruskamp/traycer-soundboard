@@ -59,4 +59,4 @@ Replace the sample audio files in `public/sounds/` with your own MP3 files for t
 
 ## License
 
-MIT
+MIT - Test
