@@ -8,49 +8,44 @@ import { useKeyboardShortcuts, useAudio } from "../hooks";
 
 const sounds: Sound[] = [
   {
-    name: "Sample 1",
-    filePath: "/sounds/sample1.mp3",
-    keyBinding: "A",
-  },
-  {
-    name: "Sample 2",
-    filePath: "/sounds/sample2.mp3",
-    keyBinding: "S",
-  },
-  {
-    name: "Sample 3",
-    filePath: "/sounds/sample3.mp3",
-    keyBinding: "D",
-  },
-  {
-    name: "Sample 4",
+    name: "Things Easier",
     filePath: "/sounds/sample1.mp3",
     keyBinding: "1",
   },
   {
-    name: "Sample 5",
+    name: "Improving Lives",
     filePath: "/sounds/sample2.mp3",
     keyBinding: "2",
   },
   {
-    name: "Sample 6",
+    name: "All Of Us",
     filePath: "/sounds/sample3.mp3",
     keyBinding: "3",
   },
   {
-    name: "Sample 7",
-    filePath: "/sounds/sample1.mp3",
-    keyBinding: "F",
+    name: "The Standard",
+    filePath: "/sounds/sample4.mp3",
+    keyBinding: "4",
   },
   {
-    name: "Sample 8",
-    filePath: "/sounds/sample2.mp3",
-    keyBinding: "G",
+    name: "Powerful Mission",
+    filePath: "/sounds/sample5.mp3",
+    keyBinding: "q",
   },
   {
-    name: "Sample 9",
-    filePath: "/sounds/sample3.mp3",
-    keyBinding: "H",
+    name: "Impressed",
+    filePath: "/sounds/sample6.mp3",
+    keyBinding: "w",
+  },
+  {
+    name: "There's A Lot",
+    filePath: "/sounds/sample7.mp3",
+    keyBinding: "e",
+  },
+  {
+    name: "Thank You",
+    filePath: "/sounds/sample8.mp3",
+    keyBinding: "r",
   },
 ];
 
@@ -84,7 +79,7 @@ const Soundboard: React.FC = () => {
           setMuted={setMuted}
         />
       </header>
-      <section className="mb-4 flex flex-wrap gap-2 items-center">
+      <section className="mb-6 flex flex-wrap gap-2 items-center">
         <span className="text-xs text-gray-500">Keyboard Shortcuts:</span>
         {sounds.map((s) => (
           <span
@@ -95,14 +90,14 @@ const Soundboard: React.FC = () => {
           </span>
         ))}
       </section>
-      <section className="mb-4">
+      {/* <section className="mb-4">
         <input
           type="search"
           placeholder="Filter sounds..."
           className="w-full max-w-xs p-2 border rounded focus:ring focus:ring-blue-300"
           aria-label="Filter sounds"
         />
-      </section>
+      </section> */}
       {isLoading && (
         <LoadingSpinner
           size="large"
@@ -123,7 +118,7 @@ const Soundboard: React.FC = () => {
               loading={!!loading[sound.filePath]}
               error={error[sound.filePath]}
             />
-            <button
+            {/* <button
               className="absolute top-2 right-2 bg-white border border-blue-300 rounded-full p-1 shadow hover:bg-blue-100 transition"
               aria-label={`Preview ${sound.name}`}
               onClick={() => {
@@ -134,7 +129,7 @@ const Soundboard: React.FC = () => {
               disabled={!!loading[sound.filePath]}
             >
               <span className="text-blue-500 text-lg">👁️</span>
-            </button>
+            </button> */}
             {previewing === sound.filePath && (
               <span className="absolute bottom-2 left-2 bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs animate-fade-in">
                 Previewing...

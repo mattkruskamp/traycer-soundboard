@@ -41,7 +41,7 @@ const SoundButton: React.FC<SoundButtonProps> = ({
     <button
       ref={buttonRef}
       className={
-        `relative overflow-hidden flex flex-col items-center justify-center bg-white border border-gray-300 rounded-lg shadow-md p-4 m-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 ` +
+        `relative overflow-hidden flex flex-col items-center justify-center w-full bg-white border border-gray-300 rounded-lg shadow-md p-4 m-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 ` +
         (isPressed
           ? "bg-blue-300 scale-95 shadow-lg animate-bounce-short"
           : "hover:bg-blue-100") +
