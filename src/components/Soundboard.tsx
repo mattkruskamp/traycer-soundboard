@@ -9,42 +9,42 @@ import { useKeyboardShortcuts, useAudio } from "../hooks";
 const sounds: Sound[] = [
   {
     name: "Things Easier",
-    filePath: "/sounds/sample1.mp3",
+    filePath: "./sounds/sample1.mp3",
     keyBinding: "1",
   },
   {
     name: "Improving Lives",
-    filePath: "/sounds/sample2.mp3",
+    filePath: "./sounds/sample2.mp3",
     keyBinding: "2",
   },
   {
     name: "All Of Us",
-    filePath: "/sounds/sample3.mp3",
+    filePath: "./sounds/sample3.mp3",
     keyBinding: "3",
   },
   {
     name: "The Standard",
-    filePath: "/sounds/sample4.mp3",
+    filePath: "./sounds/sample4.mp3",
     keyBinding: "4",
   },
   {
     name: "Powerful Mission",
-    filePath: "/sounds/sample5.mp3",
+    filePath: "./sounds/sample5.mp3",
     keyBinding: "q",
   },
   {
     name: "Impressed",
-    filePath: "/sounds/sample6.mp3",
+    filePath: "./sounds/sample6.mp3",
     keyBinding: "w",
   },
   {
     name: "There's A Lot",
-    filePath: "/sounds/sample7.mp3",
+    filePath: "./sounds/sample7.mp3",
     keyBinding: "e",
   },
   {
     name: "Thank You",
-    filePath: "/sounds/sample8.mp3",
+    filePath: "./sounds/sample8.mp3",
     keyBinding: "r",
   },
 ];
